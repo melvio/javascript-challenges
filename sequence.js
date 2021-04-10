@@ -2,6 +2,7 @@
 // e.g. n=5 -> n=101 , has sequence of '0' which is of length 1
 import assert from "assert";
 
+// O(log n)
 function sequence101(n) {
     let maxSequenceLength = 0;
     let currentSequenceLength = 0
@@ -10,15 +11,12 @@ function sequence101(n) {
     while (n > 0) {
         if (n % 2 === 1 && !foundFirst1) {
             foundFirst1 = true;
-        } else if (n % 2 === 0 && !foundFirst1) {
-            // do nothing
         } else if (n % 2 === 0 && foundFirst1) {
             currentSequenceLength += 1;
         } else if (n % 2 === 1 && foundFirst1) {
             maxSequenceLength = Math.max(currentSequenceLength, maxSequenceLength);
             currentSequenceLength = 0;
         }
-
         n >>= 1;
     }
     return maxSequenceLength;
@@ -41,6 +39,8 @@ function testSequence101() {
     assert(sequence101(1000) === 1); // 1111101000
     assert(sequence101(1160) === 3); // 10010001000
     assert(sequence101(1161) === 3); // 10010001001
+    assert(sequence101(2097153) === 20) // 1000000000000000000001
+    assert(sequence101(Number.MAX_SAFE_INTEGER) === 0); // 11111111111111111111111111111111111111111111111111111
     assert(sequence101(-1) === 0);
     console.log("success")
 }
