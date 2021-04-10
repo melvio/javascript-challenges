@@ -1,9 +1,10 @@
 
 
-/* find longest sequence of 0 between to 1s in the binary version representation
+/**
+ * find longest sequence of 0 between to 1s in the binary version representation
  * e.g. n=5 -> n=101 , has sequence of '0' which is of length 1
  *
- * O(log n)
+ * complexity: O(log n) because n is shifted right each iteration.
  */
 export default function sequence101(n) {
     let maxSequenceLength = 0;

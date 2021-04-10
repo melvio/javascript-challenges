@@ -1,3 +1,8 @@
+/**
+ * Return the only element that is not paired in a further completely paired array .
+ *
+ * complexity: O(n)
+ */
 export default function oddOccurrencesInArray(a) {
     let map = {};
     for (const elem of a) {

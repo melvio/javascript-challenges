@@ -1,3 +1,8 @@
+/**
+ * rotate array a to the right by k indexes.
+ *
+ * complexity: O(n)
+ */
 export default function cyclicRotation(a, k) {
     let aLength = a.length;
     let kNormalized = k % aLength;
