@@ -20,7 +20,7 @@ function testSequence101() {
     assert(sequence101(2097153) === 20); // 1000000000000000000001
     assert(sequence101(Number.MAX_SAFE_INTEGER) === 0); // 11111111111111111111111111111111111111111111111111111
     assert(sequence101(-1) === 0);
-    console.log("success");
 }
 
 testSequence101();
+console.log("success");

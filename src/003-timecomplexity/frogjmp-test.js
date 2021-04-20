@@ -13,3 +13,4 @@ function testFrogJmp() {
 
 
 testFrogJmp();
+console.log("success");

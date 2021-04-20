@@ -16,3 +16,4 @@ function testSumArray() {
 
 testSumArray();
 testFindMissingElement();
+console.log("success");

@@ -9,7 +9,6 @@ function testCyclicRotation() {
     assertSameArray(cyclicRotation([3, 1, 2], 1), [1, 2, 3]);
     assertSameArray(cyclicRotation([3, 1, 2], 4), [1, 2, 3]);
     assertSameArray(cyclicRotation([6, 10, 12, 21, 10], 3), [21, 10, 6, 10, 12]);
-    console.log("success");
 }
 
 function assertSameArray(ar1, ar2) {
@@ -18,4 +17,5 @@ function assertSameArray(ar1, ar2) {
 }
 
 testCyclicRotation();
+console.log("success");
 
