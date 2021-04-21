@@ -1,6 +1,4 @@
-// split a list to maximize the absolute sum difference of the halves.
-// O(n)
-export function tapeEquilibrium(arr) {
+function getArraySumInformation(arr) {
     let leftSum = 0;
     let leftSums = [];
     let totalSum = 0;
@@ -10,7 +8,10 @@ export function tapeEquilibrium(arr) {
         leftSums.push(leftSum);
     }
     leftSums.pop(); // can't split at the end of the list
+    return {leftSums, totalSum};
+}
 
+function calculateOptimalSplit(leftSums, totalSum) {
     let p = 1;
     let maxP = 1;
     let maxDifference = 0;
@@ -24,4 +25,11 @@ export function tapeEquilibrium(arr) {
         p += 1;
     }
     return maxP;
+}
+
+// split a list to maximize the absolute sum difference of the halves.
+// O(n)
+export function tapeEquilibrium(arr) {
+    let {leftSums, totalSum} = getArraySumInformation(arr);
+    return calculateOptimalSplit(leftSums, totalSum);
 }
