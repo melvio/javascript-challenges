@@ -1,4 +1,3 @@
-// import assert from "assert";
 const canJump = require("./frog-river-one.js");
 
 
