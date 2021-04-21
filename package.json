@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "for f in src/001*/*.test.js src/002*/*.test.js src/003*/*.test.js; do echo -n \"$f - \" ; node \"$f\" ; done && jest src/004-counting/"
+    "test": "for f in src/001*/*.test.js src/002*/*.test.js; do echo -n \"$f - \" ; node \"$f\" ; done && jest src/003-timecomplexity/ && jest src/004-counting/"
   },
   "keywords": [],
   "author": "",

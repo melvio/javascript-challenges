@@ -1,16 +1,11 @@
-import assert from "assert";
-import {tapeEquilibrium} from "./tape-equilibrium.js";
+const tapeEquilibrium = require("./tape-equilibrium.js");
 
 
+test("testTapeEquilibrium", () => {
+    expect(tapeEquilibrium([1, 3, 4, 5])).toBe(1);
+    expect(tapeEquilibrium([1, 4, 5])).toBe(1);
+    expect(tapeEquilibrium([5, -5, 7, 6])).toBe(2);
+    expect(tapeEquilibrium([0, 0])).toBe(1);
+    expect(tapeEquilibrium([-10, 0])).toBe(1);
+});
 
-
-function testTapeEquilibrium() {
-    assert(tapeEquilibrium([1, 3, 4, 5]) === 1);
-    assert(tapeEquilibrium([1, 4, 5]) === 1);
-    assert(tapeEquilibrium([5, -5, 7, 6]) === 2);
-    assert(tapeEquilibrium([0, 0]) === 1);
-    assert(tapeEquilibrium([-10, 0]) === 1);
-}
-
-testTapeEquilibrium();
-console.log("success");

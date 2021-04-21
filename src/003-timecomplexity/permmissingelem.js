@@ -1,5 +1,5 @@
 // complexity: O(n) because of the array summing
-export function findMissingElement(arr) {
+function findMissingElement(arr) {
     let n = arr.length + 1;
 
     // <https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF>
@@ -11,7 +11,7 @@ export function findMissingElement(arr) {
 }
 
 
-export function sumArray(arr) {
+function sumArray(arr) {
     if (arr.length === 0) {
         return 0;
     }
@@ -24,3 +24,5 @@ export function sumArray(arr) {
     });
 }
 
+
+module.exports = {findMissingElement, sumArray};

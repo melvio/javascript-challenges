@@ -29,7 +29,10 @@ function calculateOptimalSplit(leftSums, totalSum) {
 
 // split a list to maximize the absolute sum difference of the halves.
 // O(n)
-export function tapeEquilibrium(arr) {
+function tapeEquilibrium(arr) {
     let {leftSums, totalSum} = getArraySumInformation(arr);
     return calculateOptimalSplit(leftSums, totalSum);
 }
+
+
+module.exports = tapeEquilibrium;

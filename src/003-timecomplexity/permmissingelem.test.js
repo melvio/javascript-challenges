@@ -1,19 +1,17 @@
-import assert from "assert";
-import {findMissingElement, sumArray} from "./permmissingelem.js";
+const {findMissingElement, sumArray} = require("./permmissingelem.js");
 
-function testFindMissingElement() {
-    assert(findMissingElement([1, 3]) === 2);
-    assert(findMissingElement([1, 2, 3, 5, 4, 7]) === 6);
-    assert(findMissingElement([1, 2, 3, 4, 7, 8, 6, 10, 9, 11, 13, 12]) === 5);
-}
+test("testFindMissingElement", () => {
+    expect(findMissingElement([1, 3])).toBe(2);
+    expect(findMissingElement([1, 2, 3, 5, 4, 7])).toBe(6);
+    expect(findMissingElement([1, 2, 3, 4, 7, 8, 6, 10, 9, 11, 13, 12])).toBe(5);
+});
 
-function testSumArray() {
-    assert(sumArray([]) === 0);
-    assert(sumArray([1]) === 1);
-    assert(sumArray([1, -1]) === 0);
-    assert(sumArray([1, 2, 3]) === 6);
-}
 
-testSumArray();
-testFindMissingElement();
-console.log("success");
+test("testSumArray", () => {
+    expect(sumArray([])).toBe(0);
+    expect(sumArray([1])).toBe(1);
+    expect(sumArray([1, -1])).toBe(0);
+    expect(sumArray([1, 2, 3])).toBe(6);
+});
+
+

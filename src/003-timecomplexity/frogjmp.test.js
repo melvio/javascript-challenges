@@ -1,16 +1,12 @@
-import assert from "assert";
-import frogJump from "./frogjmp.js";
+const frogJump = require("./frogjmp.js");
 
 
+test("testFrogJmp", () => {
+    expect(frogJump(10, 85, 30)).toBe(3);
+    expect(frogJump(10, 99, 10)).toBe(9);
+    expect(frogJump(10, 100, 10)).toBe(9);
+    expect(frogJump(10, 101, 10)).toBe(10);
+    expect(frogJump(1, 800_000_000, 2)).toBe(400_000_000);
+});
 
-function testFrogJmp() {
-    assert(frogJump(10, 85, 30) === 3);
-    assert(frogJump(10, 99, 10) === 9);
-    assert(frogJump(10, 100, 10) === 9);
-    assert(frogJump(10, 101, 10) === 10);
-    assert(frogJump(1, 800_000_000, 2) === 400_000_000);
-}
 
-
-testFrogJmp();
-console.log("success");
