@@ -1,5 +1,5 @@
 // O(n)
-export function canJump(destination, leaves) {
+function canJump(destination, leaves) {
     // https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF
     // Using the shift by 1 trick to prevent floating point numbers.
     // We can use shift by 1 because we multiple a positive odd and even number.
@@ -21,4 +21,6 @@ export function canJump(destination, leaves) {
     }
     return -1; // cannot jump
 }
+
+module.exports = canJump
 
