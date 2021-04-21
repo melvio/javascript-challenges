@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "for f in src/*/*-test.js; do echo -n \"$f - \" ; node \"$f\" ; done"
+    "test": "for f in src/*/*.test.js; do echo -n \"$f - \" ; node \"$f\" ; done"
   },
   "keywords": [],
   "author": "",
